@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <h2>Lesson Pricing</h2>
+
+    <div id="pricing"></div>
+
+    <script>
+      fetch("/api/pricing")
+        .then((res) => res.json())
+        .then((data) => {
+          const container = document.getElementById("pricing");
+
+          data.forEach((p) => {
+            const div = document.createElement("div");
+
+            div.innerHTML = `<h3>${p.type}</h3><p>${p.price}</p>`;
+
+            container.appendChild(div);
+          });
+        });
+    </script>
+  </body>
+</html>

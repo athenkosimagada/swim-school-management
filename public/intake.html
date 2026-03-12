@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <h2>Child Registration</h2>
+
+    <form id="intakeForm">
+      <label>Child Name</label>
+      <input type="text" id="childName" required />
+
+      <label>Age</label>
+      <input type="number" id="age" required />
+
+      <div id="napContainer">
+        <label>Nap Time</label>
+        <input type="time" name="nap" />
+      </div>
+
+      <button type="button" id="addNap">Add Another Nap</button>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <script src="js/intake.js"></script>
+  </body>
+</html>
