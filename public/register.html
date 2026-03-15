@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo" />
+            <h1>AquaKids</h1>
+        </div>
+        
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="intake.html">Register Child</a>
+            <a href="booking.html">Book Lesson</a>
+            <a href="pricing.html">Pricing</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h2>Register Your Child</h2>
+            <p>Fill out the form below to register your child for a swim lesson.</p>
+            <form action="register.html" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required />
+
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname" name="lastname" required />
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required />
+
+                <label for="confirmPassword">Re-enter Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required />
+
+                <button type="submit">Register</button>
+                <br>
+                <p>Already have an account? <a href="sign-in.html">sign-in</a></p>
+            </form>
+
+        </div>
+    </main>
+
+</body>
+</html>

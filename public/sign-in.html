@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sign In</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="logo.png" alt="Logo" />
+                <h1>AquaKids</h1>
+            </div>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="intake.html">Register Child</a>
+                <a href="booking.html">Book Lesson</a>
+                <a href="pricing.html">Pricing</a>
+            </nav>
+        </header>
+
+    <main>
+        <div class="form-container">
+            <h2>Sign In</h2>
+            <p>Fill out the form below to sign in to your account.</p>
+            <form action="sign-in.html" method="POST">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required />
+                <div class="remember-me">
+                <input
+                    type="radio"
+                    id="remember"
+                    name="remember"
+                    value="remember"
+                    />
+                <label for="remember">Remember Me</label><br />
+                <a href="#">Forgot Password?</a>
+                </div>
+          <button type="submit">Sign In</button>
+          <br />
+          <p>Don't have an account? <a href="register.html">register</a></p>
+        </form>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h4 class="footer-title">Programs</h4>
+
+            <div class="footer-links">
+              <a href="#">Infant Splash</a>
+              <a href="#">Toddler Swim</a>
+              <a href="#">Preschool Strokes</a>
+              <a href="#">Private Lessons</a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h4 class="footer-title">Resources</h4>
+
+            <div class="footer-links">
+              <a href="#">Safety Guidelines</a>
+              <a href="#">Parent Handbook</a>
+              <a href="#">FAQs</a>
+              <a href="#">Blog</a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h4 class="footer-title">Account</h4>
+
+            <div class="footer-links">
+              <a href="#">Parent Login</a>
+              <a href="#">Sign Up</a>
+              <a href="#">Dashboard</a>
+              <a href="#">Support</a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h4 class="footer-title">Contact</h4>
+
+            <div class="footer-links">
+              <a href="mailto:info@aquakids.com">Email Us</a>
+              <a href="tel:5551234567">Call: (555) 123-4567</a>
+              <a href="#">Location</a>
+              <a href="#">Hours</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-brand">
+            <h2>SAFE</h2>
+            <h2>SWIMMING</h2>
+          </div>
+
+          <div class="footer-right">
+            <div class="footer-social">
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+              <a href="#"><i class="ri-instagram-line"></i></a>
+              <a href="#"><i class="ri-youtube-fill"></i></a>
+              <a href="#"><i class="ri-twitter-x-line"></i></a>
+            </div>
+
+            <p class="footer-copy">© 2025 AquaKids Swim School</p>
+          </div>
+        </div>
+
+        <div class="footer-est">
+          <span></span>
+          <p>Est. 2018</p>
+        </div>
+      </div>
+    </footer>
+    </body>
+</html>
