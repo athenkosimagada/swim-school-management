@@ -1,0 +1,145 @@
+/* =====================================================
+   AVOUT HERO SECTION
+   ===================================================== */
+
+.about-hero {
+  padding: 140px 20px 100px;
+  background:
+    linear-gradient(var(--overlay-dark-30), var(--overlay-dark-30)),
+    linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+
+  color: var(--color-white);
+}
+
+.about-hero-content {
+  max-width: 700px;
+}
+
+.about-hero h1 {
+  font-size: 56px;
+  margin-bottom: 20px;
+}
+
+.about-hero .lead {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+/* =====================================================
+   PROGRAMS SECTION
+   ===================================================== */
+
+.programs {
+  padding: 100px 20px;
+}
+
+.program {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 120px;
+}
+
+.program.reverse {
+  direction: rtl;
+}
+
+.program.reverse * {
+  direction: ltr;
+}
+
+.program-age {
+  display: inline-block;
+  background: var(--bg-soft);
+  color: var(--color-primary-dark);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.program h2 {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.program p {
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+
+.program-list {
+  list-style: none;
+}
+
+.program-list li {
+  margin-bottom: 10px;
+  color: var(--text-soft);
+}
+
+.program-image img {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-medium);
+}
+
+/* =====================================================
+   SAFETY SECTION
+   ===================================================== */
+
+.safety {
+  padding: 100px 20px;
+  background: var(--bg-light);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 60px;
+}
+
+.safety-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.safety-card {
+  background: var(--color-white);
+  padding: 40px;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-soft);
+}
+
+.safety-card i {
+  font-size: 32px;
+  color: var(--color-primary-dark);
+  margin-bottom: 14px;
+}
+
+/* =====================================================
+   CTA SECTION
+   ===================================================== */
+
+.about-cta {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.about-cta h2 {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.about-cta p {
+  color: var(--text-light);
+  margin-bottom: 30px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
