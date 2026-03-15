@@ -605,3 +605,166 @@ main {
     align-items: flex-end;
   }
 }
+
+/* =====================================================
+   LAYOUT
+   ===================================================== */
+
+.container {
+  max-width: var(--container-wide);
+  margin: auto;
+  padding: 0 20px;
+}
+
+.card {
+  background: var(--color-white);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-soft);
+}
+
+/* =====================================================
+   GRID
+   ===================================================== */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* =====================================================
+   ICONS
+   ===================================================== */
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.icon-aqua {
+  background: rgba(34, 211, 238, 0.15);
+  color: var(--color-primary-dark);
+}
+
+.icon-coral {
+  background: rgba(255, 107, 107, 0.15);
+  color: var(--color-danger);
+}
+
+.icon-purple {
+  background: rgba(168, 85, 247, 0.15);
+  color: #7e22ce;
+}
+
+/* =====================================================
+   ACTION BUTTONS
+   ===================================================== */
+
+.action-card {
+  padding: 24px;
+  border-radius: 18px;
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+
+.action-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-medium);
+}
+
+.action-coral {
+  background: var(--gradient-danger);
+}
+.action-aqua {
+  background: var(--gradient-primary);
+}
+.action-purple {
+  background: var(--gradient-purple);
+}
+.action-orange {
+  background: var(--gradient-orange);
+}
+
+/* =====================================================
+   COMMON UTILITIES
+   ===================================================== */
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.card {
+  background: var(--color-white);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-light);
+}
+
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.badge {
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+}
+
+.badge-success {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+}
+
+@media (max-width: 900px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
