@@ -1,0 +1,246 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+
+    <!-- Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="dashboard">
+      <aside class="dashboard-sidebar">
+        <div class="sidebar-header">
+          <div class="sidebar-brand">
+            <img src="assets/images/logo.png" />
+            <span>AquaKids</span>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a class="nav-item active">
+            <i class="ri-dashboard-line"></i>
+            <span>Dashboard</span>
+          </a>
+
+          <a class="nav-item">
+            <i class="ri-parent-line"></i>
+            <span>My Children</span>
+          </a>
+
+          <a class="nav-item">
+            <i class="ri-calendar-check-line"></i>
+            <span>Book Lessons</span>
+          </a>
+
+          <a class="nav-item">
+            <i class="ri-money-dollar-circle-line"></i>
+            <span>Payment</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <button class="nav-item logout">
+            <i class="ri-logout-box-line"></i>
+            <span>Logout</span>
+          </button>
+        </div>
+      </aside>
+
+      <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+      <main class="dashboard-main">
+        <div class="container">
+          <div class="dashboard-header">
+            <button class="menu-toggle" id="menuToggle">
+              <i class="ri-menu-line"></i>
+            </button>
+            <h1 class="dashboard-title">Welcome back, Sarah Johnson 👋</h1>
+            <p class="dashboard-subtitle">
+              Here's what's happening with your children's swim lessons
+            </p>
+          </div>
+
+          <div class="stats-grid">
+            <div class="card stat-card">
+              <div class="stat-icon icon-aqua">
+                <i class="ri-calendar-check-line"></i>
+              </div>
+
+              <h3>Upcoming Lessons</h3>
+              <p class="stat-number aqua">3</p>
+              <p class="stat-subtext">Next: Tomorrow 10:30 AM</p>
+            </div>
+
+            <div class="card stat-card">
+              <div class="stat-icon icon-coral">
+                <i class="ri-parent-line"></i>
+              </div>
+
+              <h3>Active Children</h3>
+              <p class="stat-number coral">2</p>
+            </div>
+
+            <div class="card stat-card">
+              <div class="stat-icon icon-purple">
+                <i class="ri-money-dollar-circle-line"></i>
+              </div>
+
+              <h3>Credits Remaining</h3>
+              <p class="stat-number purple">8</p>
+            </div>
+          </div>
+
+          <div class="dashboard-section">
+            <h2 class="section-title">Quick Actions</h2>
+
+            <div class="quick-actions">
+              <a class="action-card action-coral">
+                <i class="ri-calendar-line"></i>
+                Book Lesson
+              </a>
+
+              <a class="action-card action-aqua">
+                <i class="ri-user-add-line"></i>
+                Add Child
+              </a>
+
+              <a class="action-card action-purple">
+                <i class="ri-calendar-2-line"></i>
+                View Schedule
+              </a>
+
+              <a class="action-card action-orange">
+                <i class="ri-message-3-line"></i>
+                Contact Instructor
+              </a>
+            </div>
+          </div>
+
+          <section class="dashboard-section">
+            <h2 class="section-title">Upcoming Lessons</h2>
+
+            <div class="lessons-card card">
+              <div class="lesson-item">
+                <div class="lesson-left">
+                  <div class="lesson-icon icon-aqua">
+                    <i class="ri-swim-line"></i>
+                  </div>
+
+                  <div class="lesson-info">
+                    <h3>Emma Johnson</h3>
+                    <p>2025-01-15 • 3:00 PM - 3:30 PM</p>
+                    <span>Instructor: Sarah Mitchell</span>
+                  </div>
+                </div>
+
+                <div class="lesson-right">
+                  <span class="badge badge-success">Confirmed</span>
+                  <button class="lesson-menu">
+                    <i class="ri-more-2-fill"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="lesson-item">
+                <div class="lesson-left">
+                  <div class="lesson-icon icon-aqua">
+                    <i class="ri-swim-line"></i>
+                  </div>
+
+                  <div class="lesson-info">
+                    <h3>Oliver Johnson</h3>
+                    <p>2025-01-16 • 11:00 AM - 11:30 AM</p>
+                    <span>Instructor: Michael Chen</span>
+                  </div>
+                </div>
+
+                <div class="lesson-right">
+                  <span class="badge badge-success">Confirmed</span>
+                  <button class="lesson-menu">
+                    <i class="ri-more-2-fill"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="dashboard-section">
+            <div class="section-header">
+              <h2 class="section-title">Your Children</h2>
+              <a class="section-link">View All →</a>
+            </div>
+
+            <div class="children-grid">
+              <div class="child-card card">
+                <div class="child-profile">
+                  <img src="assets/images/child1.jpg" />
+
+                  <div class="child-info">
+                    <h3>Emma Johnson</h3>
+                    <p>2 years, 4 months</p>
+
+                    <span class="badge badge-success">Beginner</span>
+
+                    <div class="child-progress">
+                      <i class="ri-check-line"></i>
+                      6 lessons completed
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="child-card card">
+                <div class="child-profile">
+                  <img src="assets/images/child2.jpg" />
+
+                  <div class="child-info">
+                    <h3>Oliver Johnson</h3>
+                    <p>11 months</p>
+
+                    <span class="badge badge-success">Infant</span>
+
+                    <div class="child-progress">
+                      <i class="ri-check-line"></i>
+                      3 lessons completed
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      const menuToggle = document.getElementById("menuToggle");
+      const sidebar = document.getElementById("sidebar");
+      const overlay = document.getElementById("sidebarOverlay");
+
+      menuToggle.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+        overlay.classList.toggle("active");
+      });
+
+      overlay.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+        overlay.classList.remove("active");
+      });
+    </script>
+  </body>
+</html>
