@@ -5,37 +5,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AquaKids | Sign In</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/login.css" />
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Pacifico&display=swap"
+        rel="stylesheet" />
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="logo.png" alt="Logo" />
-            <h1>AquaKids</h1>
-        </div>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="AquaKids Logo" />
+                <h1>AquaKids</h1>
+            </div>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="intake.html">Register Child</a>
-            <a href="booking.html">Book Lesson</a>
-            <a href="pricing.html">Pricing</a>
-        </nav>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="intake.html">Register Child</a>
+                <a href="booking.html">Book Lesson</a>
+                <a href="pricing.html">Pricing</a>
+            </nav>
+
+            <div class="menu-icon">
+                <i class="ri-menu-line"></i>
+            </div>
+        </div>
     </header>
 
     <main>
         <div class="form-container">
-            <h2>Sign In</h2>
-            <p>Fill out the form below to sign in to your account.</p>
+            <h2>Welcome back </h2>
+            <p>Sign in to access your parent dashboard</p>
             <form action="sign-in.html" method="POST">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required />
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required />
 
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" required />
+                <input type="password" id="password" name="password" placeholder="••••••••••" required />
                 <div class="remember-me">
-                    <input type="radio" id="remember" name="remember" value="remember" />
-                    <label for="remember">Remember Me</label><br />
+                    <label class="remember-left">
+                        <input type="checkbox" id="remember" name="remember" value="remember" />
+                        <span>Remember me</span>
+                    </label>
                     <a href="#">Forgot Password?</a>
                 </div>
                 <button type="submit">Sign In</button>
