@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/dashboard.css" />
 
-    <!-- Icons -->
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -23,7 +22,9 @@
 
   <body>
     <div class="dashboard">
-      <aside class="dashboard-sidebar">
+      <!-- SIDEBAR -->
+
+      <aside id="sidebar" class="dashboard-sidebar">
         <div class="sidebar-header">
           <div class="sidebar-brand">
             <img src="assets/images/logo.png" />
@@ -32,22 +33,22 @@
         </div>
 
         <nav class="sidebar-nav">
-          <a class="nav-item active">
+          <a class="nav-item active" href="dashboard.html">
             <i class="ri-dashboard-line"></i>
             <span>Dashboard</span>
           </a>
 
-          <a class="nav-item">
+          <a class="nav-item" href="children.html">
             <i class="ri-parent-line"></i>
             <span>My Children</span>
           </a>
 
-          <a class="nav-item">
+          <a class="nav-item" href="booking.html">
             <i class="ri-calendar-check-line"></i>
             <span>Book Lessons</span>
           </a>
 
-          <a class="nav-item">
+          <a class="nav-item" href="payment.html">
             <i class="ri-money-dollar-circle-line"></i>
             <span>Payment</span>
           </a>
@@ -61,19 +62,27 @@
         </div>
       </aside>
 
-      <div class="sidebar-overlay" id="sidebarOverlay"></div>
+      <div id="sidebarOverlay" class="sidebar-overlay"></div>
+
+      <!-- MAIN -->
 
       <main class="dashboard-main">
         <div class="container">
+          <!-- HEADER -->
+
           <div class="dashboard-header">
-            <button class="menu-toggle" id="menuToggle">
+            <button id="menuToggle" class="menu-toggle">
               <i class="ri-menu-line"></i>
             </button>
+
             <h1 class="dashboard-title">Welcome back, Sarah Johnson 👋</h1>
+
             <p class="dashboard-subtitle">
               Here's what's happening with your children's swim lessons
             </p>
           </div>
+
+          <!-- STATS -->
 
           <div class="stats-grid">
             <div class="card stat-card">
@@ -82,7 +91,9 @@
               </div>
 
               <h3>Upcoming Lessons</h3>
+
               <p class="stat-number aqua">3</p>
+
               <p class="stat-subtext">Next: Tomorrow 10:30 AM</p>
             </div>
 
@@ -92,6 +103,7 @@
               </div>
 
               <h3>Active Children</h3>
+
               <p class="stat-number coral">2</p>
             </div>
 
@@ -101,9 +113,12 @@
               </div>
 
               <h3>Credits Remaining</h3>
+
               <p class="stat-number purple">8</p>
             </div>
           </div>
+
+          <!-- QUICK ACTIONS -->
 
           <div class="dashboard-section">
             <h2 class="section-title">Quick Actions</h2>
@@ -131,6 +146,8 @@
             </div>
           </div>
 
+          <!-- UPCOMING LESSONS -->
+
           <section class="dashboard-section">
             <h2 class="section-title">Upcoming Lessons</h2>
 
@@ -143,13 +160,16 @@
 
                   <div class="lesson-info">
                     <h3>Emma Johnson</h3>
+
                     <p>2025-01-15 • 3:00 PM - 3:30 PM</p>
+
                     <span>Instructor: Sarah Mitchell</span>
                   </div>
                 </div>
 
                 <div class="lesson-right">
-                  <span class="badge badge-success">Confirmed</span>
+                  <span class="badge badge-success"> Confirmed </span>
+
                   <button class="lesson-menu">
                     <i class="ri-more-2-fill"></i>
                   </button>
@@ -164,13 +184,16 @@
 
                   <div class="lesson-info">
                     <h3>Oliver Johnson</h3>
+
                     <p>2025-01-16 • 11:00 AM - 11:30 AM</p>
+
                     <span>Instructor: Michael Chen</span>
                   </div>
                 </div>
 
                 <div class="lesson-right">
-                  <span class="badge badge-success">Confirmed</span>
+                  <span class="badge badge-success"> Confirmed </span>
+
                   <button class="lesson-menu">
                     <i class="ri-more-2-fill"></i>
                   </button>
@@ -179,10 +202,13 @@
             </div>
           </section>
 
+          <!-- CHILDREN -->
+
           <section class="dashboard-section">
             <div class="section-header">
               <h2 class="section-title">Your Children</h2>
-              <a class="section-link">View All →</a>
+
+              <a class="section-link"> View All → </a>
             </div>
 
             <div class="children-grid">
@@ -192,12 +218,14 @@
 
                   <div class="child-info">
                     <h3>Emma Johnson</h3>
+
                     <p>2 years, 4 months</p>
 
-                    <span class="badge badge-success">Beginner</span>
+                    <span class="badge badge-success"> Beginner </span>
 
                     <div class="child-progress">
                       <i class="ri-check-line"></i>
+
                       6 lessons completed
                     </div>
                   </div>
@@ -210,12 +238,14 @@
 
                   <div class="child-info">
                     <h3>Oliver Johnson</h3>
+
                     <p>11 months</p>
 
-                    <span class="badge badge-success">Infant</span>
+                    <span class="badge badge-success"> Infant </span>
 
                     <div class="child-progress">
                       <i class="ri-check-line"></i>
+
                       3 lessons completed
                     </div>
                   </div>
@@ -227,20 +257,6 @@
       </main>
     </div>
 
-    <script>
-      const menuToggle = document.getElementById("menuToggle");
-      const sidebar = document.getElementById("sidebar");
-      const overlay = document.getElementById("sidebarOverlay");
-
-      menuToggle.addEventListener("click", () => {
-        sidebar.classList.toggle("active");
-        overlay.classList.toggle("active");
-      });
-
-      overlay.addEventListener("click", () => {
-        sidebar.classList.remove("active");
-        overlay.classList.remove("active");
-      });
-    </script>
+    <script src="js/sidebar.js"></script>
   </body>
 </html>
