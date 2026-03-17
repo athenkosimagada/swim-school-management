@@ -5,48 +5,88 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AquaKids|Child Profile</title>
-    <link rel="stylesheet" href="css/style.css" />
+    
+    <link rel="stylesheet" href="css/profile.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
 <body>
     <div class="container">
-        <aside>
+        <aside class="sidebar">
             <div class="logo-container">
                 <img src="assets/images/logo.png" alt="AquaKids Logo" />
                 <h1>AquaKids</h1>
             </div>
 
             <nav>
-                <a href="index.html">Home</a>
-                <a href="intake.html">Register Child</a>
-                <a href="booking.html">Book Lesson</a>
-                <a href="pricing.html">Pricing</a>
+                <a href="dashboard.html"><i class="ri-dashboard-line"></i> Dashboard</a>
+                <a href="child_profile.html" class="active"><i class="ri-user-3-line"></i> My Children</a>
+                <a href="booking.html"><i class="ri-calendar-check-line"></i> Book Lesson</a>
+                <a href="pricing.html"><i class="ri-price-tag-3-line"></i> Pricing</a>
             </nav>
-            <button class="logout-button">Logout</button>
+
+            <div class="sidebar-footer">
+                <hr>
+                <button class="logout-button"><i class="ri-logout-box-r-line"></i> Logout</button>
+            </div>
         </aside>
 
         <main class="main">
             <div class="header">
-                <div>
+                <div class="header-content">
                     <h2>Child Profile</h2>
                     <p>Manage your children's swimming profiles and progress</p>
                 </div>
 
-                <button class="add-btn">+ Add Child</button>
+                <button class="add-btn">+ Add New Child</button>
             </div>
 
-            <div class="cards" id="cards">
+            <div class="cards" id="cards"></div>
+            <p id="empty-state" class="empty-state">No children yet. Click "Add New Child" to create a profile.</p>
 
-                <!-- Added Child Cards -->
-
-                <div class="empty-card">
-                    <div class="plus">+</div>
-                    <p>Add Child</p>
+            <div class="modal-overlay hidden" id="modalOverlay">
+                <div class="modal">
+                    <h3>Add Child Profile</h3>
+                    <form id="childForm">
+                        <label>Profile Picture
+                            <input type="file" id="childPicture" accept="image/*">
+                        </label>
+                        <div class="avatar-preview" id="avatarPreview">
+                            <img id="previewImage" src="https://via.placeholder.com/160/9fc9dd/ffffff?text=Preview" alt="Preview" />
+                            <span>Preview</span>
+                        </div>
+                        <label>Name<input type="text" id="childName" placeholder="Child name" required></label>
+                        <label>Date of Birth<input type="date" id="childDob" required></label>
+                        <label>Gender
+                            <select id="childGender" required>
+                                <option value="">Select gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Non-binary">Non-binary</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </label>
+                        <label>Level
+                            <select id="childLevel" required>
+                                <option value="Beginner">Beginner</option>
+                                <option value="Intermediate">Intermediate</option>
+                                <option value="Advanced">Advanced</option>
+                            </select>
+                        </label>
+                        <label>Swimming Experience<textarea id="childExperience" placeholder="e.g. 6 lessons completed" rows="2"></textarea></label>
+                        <label>Medical Notes<textarea id="childMedical" placeholder="e.g. No allergies" rows="2"></textarea></label>
+                        <label>Nap Schedule<textarea id="childNap" placeholder="e.g. 10:00 AM - 11:30 AM\n2:00 PM - 3:30 PM" rows="3"></textarea></label>
+                        <div class="form-actions">
+                            <button type="button" id="cancelBtn">Cancel</button>
+                            <button type="submit" class="submit-btn">Save</button>
+                        </div>
+                    </form>
                 </div>
-
             </div>
         </main>
     </div>
+
+    <script src="js/child_profile.js"></script>
 </body>
 
 </html>
