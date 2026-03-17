@@ -1,33 +1,62 @@
-<!doctype html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AquaKids | Bookings</title>
     <link rel="stylesheet" href="css/style.css" />
-  </head>
+</head>
 
-  <body>
-    <h2>Book Lesson</h2>
+<body>
+    <div class="container">
+        <aside>
+            <div class="logo-container">
+                <img src="assets/images/logo.png" alt="AquaKids Logo" />
+                <h1>AquaKids</h1>
+            </div>
 
-    <form id="bookingForm">
-      <label>Day</label>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="intake.html">Register Child</a>
+                <a href="booking.html">Book Lesson</a>
+                <a href="pricing.html">Pricing</a>
+            </nav>
+            <button class="logout-button">Logout</button>
+        </aside>
 
-      <select id="day">
-        <option>Monday</option>
-        <option>Tuesday</option>
-        <option>Wednesday</option>
-      </select>
+        <main class="main">
+            <div class="children-bar" id="children-bar">
+                <!-- Added children here -->
+            </div>
+            <div class="booking-layout">
+                <div class="calendar">
+                    <h3 id="calendar-title"></h3>
+                    <div class="calendar-grid" id="calendar"></div>
+                </div>
 
-      <label>Time</label>
+                <div class="time-slots">
+                    <h3>Available Time Slots</h3>
+                    <div class="time-slots-grid" id="time-slots"></div>
+                </div>
+            </div>
 
-      <select id="time">
-        <option>09:00</option>
-        <option>11:00</option>
-        <option>14:00</option>
-      </select>
+            <div class="booking-summary" id="booking-summary">
+                <h3>Booking Summary</h3>
+                <p id="booking-details"></p>
+                <button id="confirm-booking">Confirm Booking</button>
+            </div>
+        </main>
+        <div id="payment-popup" class="popup">
+            <div class="popup-content">
+                <h2>Invoice</h2>
+                <span class="close-btn" onclick="closePopup()">x</span>
+            </div>
+            <hr>
+            
+        </div>
 
-      <button type="submit">Book</button>
-    </form>
+    </div>
+</body>
 
-    <script src="js/booking.js"></script>
-  </body>
 </html>
