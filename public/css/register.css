@@ -2,9 +2,9 @@
    LOGIN PAGE
    ===================================================== */
 
-main.login {
+main.register {
   min-height: 100vh;
-  background: linear-gradient(135deg, #ecfeff, #ccfbf1);
+  background: linear-gradient(135deg, #89b4b6, #53b39e);
 
   display: flex;
   align-items: center;

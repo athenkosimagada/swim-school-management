@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Pricing</title>
+    <title>Register</title>
 
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/register.css" />
@@ -15,6 +15,7 @@
       rel="stylesheet"
     />
 
+    <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Pacifico&display=swap"
       rel="stylesheet"
@@ -22,6 +23,7 @@
   </head>
 
   <body>
+    <!-- NAVBAR -->
     <header class="navbar">
       <div class="nav-container">
         <div class="logo">
@@ -34,8 +36,7 @@
           <a href="pricing.html">Pricing</a>
           <a href="about.html">About</a>
           <a href="login.html">Login</a>
-
-          <button class="btn btn-primary">Sign Up</button>
+          <a href="register.html" class="btn btn-primary">Sign Up</a>
         </nav>
 
         <div class="menu-icon">
@@ -44,124 +45,75 @@
       </div>
     </header>
 
-    <div class="form-container">
-      <h2>Register Your Child</h2>
-      <p>Join AquaKids and start your child's swimming journey</p>
-      <form action="register.html" method="POST">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Emily" required />
+    <!-- MAIN -->
+    <main class="register">
+      <div class="form-container">
+        <h2>Create Account</h2>
+        <p>Join AquaKids and start your child’s journey</p>
 
-        <label for="lastname">Last Name</label>
-        <input
-          type="text"
-          id="lastname"
-          name="lastname"
-          placeholder="Smith"
-          required
-        />
+        <form>
+          <label>First Name</label>
+          <input type="text" placeholder="Emily" required />
 
-        <label for="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="you@example.com"
-          required
-        />
+          <label>Last Name</label>
+          <input type="text" placeholder="Smith" required />
 
-        <label for="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="••••••••••"
-          required
-        />
+          <label>Email</label>
+          <input type="email" placeholder="you@example.com" required />
 
-        <label for="confirmPassword">Re-enter Password</label>
-        <input
-          type="password"
-          id="confirmPassword"
-          name="confirmPassword"
-          placeholder="••••••••••"
-          required
-        />
+          <label>Password</label>
+          <input type="password" placeholder="••••••••••" required />
 
-        <button type="submit">Register</button>
-        <br />
-        <p>Already have an account? <a href="login.html">sign-in</a></p>
-      </form>
-    </div>
+          <label>Confirm Password</label>
+          <input type="password" placeholder="••••••••••" required />
 
+          <button type="submit">Register</button>
+
+          <p>
+            Already have an account?
+            <a href="login.html">Sign in</a>
+          </p>
+        </form>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-grid">
-          <div class="footer-column">
+          <div>
             <h4 class="footer-title">Programs</h4>
-
             <div class="footer-links">
               <a href="#">Infant Splash</a>
               <a href="#">Toddler Swim</a>
-              <a href="#">Preschool Strokes</a>
-              <a href="#">Private Lessons</a>
             </div>
           </div>
 
-          <div class="footer-column">
+          <div>
             <h4 class="footer-title">Resources</h4>
-
             <div class="footer-links">
-              <a href="#">Safety Guidelines</a>
-              <a href="#">Parent Handbook</a>
               <a href="#">FAQs</a>
-              <a href="#">Blog</a>
             </div>
           </div>
 
-          <div class="footer-column">
+          <div>
             <h4 class="footer-title">Account</h4>
-
             <div class="footer-links">
-              <a href="#">Parent Login</a>
-              <a href="#">Sign Up</a>
+              <a href="login.html">Login</a>
               <a href="#">Dashboard</a>
-              <a href="#">Support</a>
             </div>
           </div>
 
-          <div class="footer-column">
+          <div>
             <h4 class="footer-title">Contact</h4>
-
             <div class="footer-links">
-              <a href="mailto:info@aquakids.com">Email Us</a>
-              <a href="tel:5551234567">Call: (555) 123-4567</a>
-              <a href="#">Location</a>
-              <a href="#">Hours</a>
+              <a href="#">Email</a>
             </div>
           </div>
         </div>
 
         <div class="footer-bottom">
-          <div class="footer-brand">
-            <h2>SAFE</h2>
-            <h2>SWIMMING</h2>
-          </div>
-
-          <div class="footer-right">
-            <div class="footer-social">
-              <a href="#"><i class="ri-facebook-fill"></i></a>
-              <a href="#"><i class="ri-instagram-line"></i></a>
-              <a href="#"><i class="ri-youtube-fill"></i></a>
-              <a href="#"><i class="ri-twitter-x-line"></i></a>
-            </div>
-
-            <p class="footer-copy">© 2025 AquaKids Swim School</p>
-          </div>
-        </div>
-
-        <div class="footer-est">
-          <span></span>
-          <p>Est. 2018</p>
+          <p class="footer-copy">© 2025 AquaKids</p>
         </div>
       </div>
     </footer>
