@@ -12,7 +12,7 @@ const registerUser = async (data) => {
   const passwordHash = await bcrypt.hash(password, 10);
 
   const newUser = await userRepository.createUser({
-    name: fullName,
+    fullName,
     email,
     phone,
     passwordHash,

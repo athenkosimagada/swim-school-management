@@ -186,6 +186,31 @@ a {
 }
 
 /* =====================================================
+   FORMS
+   ===================================================== */
+
+.form-error {
+  color: red;
+  background: #ffe6e6;
+  border: 1px solid red;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  display: none;
+}
+
+.error {
+  color: red;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+input.error-border {
+  border: 1px solid red;
+}
+
+/* =====================================================
    NAVBAR
    ===================================================== */
 .navbar {

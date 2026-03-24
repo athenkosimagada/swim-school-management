@@ -51,21 +51,34 @@
         <h2>Create Account</h2>
         <p>Join AquaKids and start your child’s journey</p>
 
-        <form>
-          <label>First Name</label>
-          <input type="text" placeholder="Emily" required />
+        <div id="form_error" class="form-error"></div>
 
-          <label>Last Name</label>
-          <input type="text" placeholder="Smith" required />
+        <form id="registerForm">
+          <label>Full Name</label>
+          <input
+            type="text"
+            name="full_name"
+            placeholder="Emily Johnson"
+            required
+          />
+          <small class="error" id="full_name_error"></small>
 
           <label>Email</label>
-          <input type="email" placeholder="you@example.com" required />
+          <input
+            type="email"
+            name="email"
+            placeholder="you@example.com"
+            required
+          />
+          <small class="error" id="email_error"></small>
+
+          <label>Phone Number</label>
+          <input type="tel" name="phone" placeholder="0791234567" required />
+          <small class="error" id="phone_error"></small>
 
           <label>Password</label>
-          <input type="password" placeholder="••••••••••" required />
-
-          <label>Confirm Password</label>
-          <input type="password" placeholder="••••••••••" required />
+          <input type="password" name="password" required />
+          <small class="error" id="password_error"></small>
 
           <button type="submit">Register</button>
 
@@ -119,5 +132,119 @@
     </footer>
 
     <script src="js/navbar.js"></script>
+    <script>
+      const form = document.getElementById("registerForm");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+
+        console.log("Form Data:", data);
+
+        let isValid = true;
+
+        // CLEAR ERRORS
+        clearFormError();
+        document
+          .querySelectorAll(".error")
+          .forEach((el) => (el.textContent = ""));
+        document
+          .querySelectorAll("input")
+          .forEach((el) => el.classList.remove("error-border"));
+
+        // VALIDATIONS
+
+        // FULL NAME
+        if (!data.full_name || data.full_name.trim().length < 3) {
+          showError("full_name", "Full name must be at least 3 characters");
+          isValid = false;
+        }
+
+        // EMAIL
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!data.email || !emailRegex.test(data.email)) {
+          showError("email", "Enter a valid email address");
+          isValid = false;
+        }
+
+        // PHONE (SA format)
+        const phoneRegex = /^0\d{9}$/;
+        if (!data.phone || !phoneRegex.test(data.phone)) {
+          showError(
+            "phone",
+            "Enter a valid 10-digit phone number (0791234567)",
+          );
+          isValid = false;
+        }
+
+        // PASSWORD
+        if (!data.password || data.password.length < 6) {
+          showError("password", "Password must be at least 6 characters");
+          isValid = false;
+        }
+
+        if (!isValid) return;
+
+        // SEND TO SERVER
+        try {
+          const response = await fetch("/api/users/register", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              fullName: data.full_name,
+              email: data.email,
+              phone: data.phone,
+              password: data.password,
+            }),
+          });
+
+          const result = await response.json();
+
+          if (response.ok) {
+            alert("Registration successful!");
+            window.location.href = "login.html";
+          } else {
+            // FIELD ERRORS FROM BACKEND
+            if (result.errors) {
+              Object.keys(result.errors).forEach((field) => {
+                showError(field, result.errors[field]);
+              });
+            } else {
+              // GLOBAL ERROR
+              showFormError(result.message || "Registration failed");
+            }
+          }
+        } catch (error) {
+          console.error(error);
+          showFormError("Server error. Please try again later.");
+        }
+      });
+
+      // FIELD ERROR
+      function showError(field, message) {
+        const errorEl = document.getElementById(field + "_error");
+        const inputEl = document.querySelector(`[name="${field}"]`);
+
+        if (errorEl) errorEl.textContent = message;
+        if (inputEl) inputEl.classList.add("error-border");
+      }
+
+      // GLOBAL ERROR
+      function showFormError(message) {
+        const formError = document.getElementById("form_error");
+        formError.textContent = message;
+        formError.style.display = "block";
+      }
+
+      function clearFormError() {
+        const formError = document.getElementById("form_error");
+        formError.textContent = "";
+        formError.style.display = "none";
+      }
+    </script>
   </body>
 </html>
